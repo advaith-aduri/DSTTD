@@ -1,0 +1,1334 @@
+********** Concurrent Fault Simulation **********
+Test Vectors: 
+a0 : 1
+a1 : 1
+b0 : 1
+b1 : 1
+Starting CFS....
+
+Gate: b0
+Good Gate: 
+Inputs: 
+a0 : 1
+Output: 
+a0_0 : 1
+
+Bad Gates: 
+
+Fault: a0_0 s@0
+Inputs: 
+a0 : 1
+Output: 
+a0_0 : 0
+
+Fault: a0 s@0
+Inputs: 
+a0 : 0
+Output: 
+a0_0 : 0
+
+
+
+Gate: b1
+Good Gate: 
+Inputs: 
+a0 : 1
+Output: 
+a0_1 : 1
+
+Bad Gates: 
+
+Fault: a0_1 s@0
+Inputs: 
+a0 : 1
+Output: 
+a0_1 : 0
+
+Fault: a0 s@0
+Inputs: 
+a0 : 0
+Output: 
+a0_1 : 0
+
+
+
+Gate: b2
+Good Gate: 
+Inputs: 
+a1 : 1
+Output: 
+a1_0 : 1
+
+Bad Gates: 
+
+Fault: a1_0 s@0
+Inputs: 
+a1 : 1
+Output: 
+a1_0 : 0
+
+Fault: a1 s@0
+Inputs: 
+a1 : 0
+Output: 
+a1_0 : 0
+
+
+
+Gate: b3
+Good Gate: 
+Inputs: 
+a1 : 1
+Output: 
+a1_1 : 1
+
+Bad Gates: 
+
+Fault: a1 s@0
+Inputs: 
+a1 : 0
+Output: 
+a1_1 : 0
+
+Fault: a1_1 s@0
+Inputs: 
+a1 : 1
+Output: 
+a1_1 : 0
+
+
+
+Gate: b4
+Good Gate: 
+Inputs: 
+b0 : 1
+Output: 
+b0_0 : 1
+
+Bad Gates: 
+
+Fault: b0_0 s@0
+Inputs: 
+b0 : 1
+Output: 
+b0_0 : 0
+
+Fault: b0 s@0
+Inputs: 
+b0 : 0
+Output: 
+b0_0 : 0
+
+
+
+Gate: b5
+Good Gate: 
+Inputs: 
+b0 : 1
+Output: 
+b0_1 : 1
+
+Bad Gates: 
+
+Fault: b0_1 s@0
+Inputs: 
+b0 : 1
+Output: 
+b0_1 : 0
+
+Fault: b0 s@0
+Inputs: 
+b0 : 0
+Output: 
+b0_1 : 0
+
+
+
+Gate: b6
+Good Gate: 
+Inputs: 
+b1 : 1
+Output: 
+b1_0 : 1
+
+Bad Gates: 
+
+Fault: b1 s@0
+Inputs: 
+b1 : 0
+Output: 
+b1_0 : 0
+
+Fault: b1_0 s@0
+Inputs: 
+b1 : 1
+Output: 
+b1_0 : 0
+
+
+
+Gate: b7
+Good Gate: 
+Inputs: 
+b1 : 1
+Output: 
+b1_1 : 1
+
+Bad Gates: 
+
+Fault: b1_1 s@0
+Inputs: 
+b1 : 1
+Output: 
+b1_1 : 0
+
+Fault: b1 s@0
+Inputs: 
+b1 : 0
+Output: 
+b1_1 : 0
+
+
+
+Gate: a0
+Good Gate: 
+Inputs: 
+a0_0 : 1
+b0_0 : 1
+Output: 
+c0 : 1
+
+Bad Gates: 
+
+Fault: a0_0 s@0
+Inputs: 
+a0_0 : 0
+b0_0 : 1
+Output: 
+c0 : 0
+
+Fault: b0 s@0
+Inputs: 
+a0_0 : 1
+b0_0 : 0
+Output: 
+c0 : 0
+
+Fault: a0 s@0
+Inputs: 
+a0_0 : 0
+b0_0 : 1
+Output: 
+c0 : 0
+
+Fault: b0_0 s@0
+Inputs: 
+a0_0 : 1
+b0_0 : 0
+Output: 
+c0 : 0
+
+Fault: c0 s@0
+Inputs: 
+a0_0 : 1
+b0_0 : 1
+Output: 
+c0 : 0
+
+
+
+Gate: a1
+Good Gate: 
+Inputs: 
+a1_0 : 1
+b0_1 : 1
+Output: 
+and_01 : 1
+
+Bad Gates: 
+
+Fault: a1_0 s@0
+Inputs: 
+a1_0 : 0
+b0_1 : 1
+Output: 
+and_01 : 0
+
+Fault: b0 s@0
+Inputs: 
+a1_0 : 1
+b0_1 : 0
+Output: 
+and_01 : 0
+
+Fault: a1 s@0
+Inputs: 
+a1_0 : 0
+b0_1 : 1
+Output: 
+and_01 : 0
+
+Fault: and_01 s@0
+Inputs: 
+a1_0 : 1
+b0_1 : 1
+Output: 
+and_01 : 0
+
+Fault: b0_1 s@0
+Inputs: 
+a1_0 : 1
+b0_1 : 0
+Output: 
+and_01 : 0
+
+
+
+Gate: a2
+Good Gate: 
+Inputs: 
+a0_1 : 1
+b1_0 : 1
+Output: 
+and_10 : 1
+
+Bad Gates: 
+
+Fault: b1_0 s@0
+Inputs: 
+a0_1 : 1
+b1_0 : 0
+Output: 
+and_10 : 0
+
+Fault: a0 s@0
+Inputs: 
+a0_1 : 0
+b1_0 : 1
+Output: 
+and_10 : 0
+
+Fault: a0_1 s@0
+Inputs: 
+a0_1 : 0
+b1_0 : 1
+Output: 
+and_10 : 0
+
+Fault: and_10 s@0
+Inputs: 
+a0_1 : 1
+b1_0 : 1
+Output: 
+and_10 : 0
+
+Fault: b1 s@0
+Inputs: 
+a0_1 : 1
+b1_0 : 0
+Output: 
+and_10 : 0
+
+
+
+Gate: a3
+Good Gate: 
+Inputs: 
+a1_1 : 1
+b1_1 : 1
+Output: 
+and_11 : 1
+
+Bad Gates: 
+
+Fault: b1_1 s@0
+Inputs: 
+a1_1 : 1
+b1_1 : 0
+Output: 
+and_11 : 0
+
+Fault: and_11 s@0
+Inputs: 
+a1_1 : 1
+b1_1 : 1
+Output: 
+and_11 : 0
+
+Fault: a1 s@0
+Inputs: 
+a1_1 : 0
+b1_1 : 1
+Output: 
+and_11 : 0
+
+Fault: a1_1 s@0
+Inputs: 
+a1_1 : 0
+b1_1 : 1
+Output: 
+and_11 : 0
+
+Fault: b1 s@0
+Inputs: 
+a1_1 : 1
+b1_1 : 0
+Output: 
+and_11 : 0
+
+
+
+Gate: b8
+Good Gate: 
+Inputs: 
+and_01 : 1
+Output: 
+and_01_0 : 1
+
+Bad Gates: 
+
+Fault: a1_0 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_0 : 0
+
+Fault: b0 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_0 : 0
+
+Fault: a1 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_0 : 0
+
+Fault: and_01 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_0 : 0
+
+Fault: and_01_0 s@0
+Inputs: 
+and_01 : 1
+Output: 
+and_01_0 : 0
+
+Fault: b0_1 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_0 : 0
+
+
+
+Gate: b9
+Good Gate: 
+Inputs: 
+and_01 : 1
+Output: 
+and_01_1 : 1
+
+Bad Gates: 
+
+Fault: a1_0 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_1 : 0
+
+Fault: b0 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_1 : 0
+
+Fault: a1 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_1 : 0
+
+Fault: and_01 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_1 : 0
+
+Fault: and_01_1 s@0
+Inputs: 
+and_01 : 1
+Output: 
+and_01_1 : 0
+
+Fault: b0_1 s@0
+Inputs: 
+and_01 : 0
+Output: 
+and_01_1 : 0
+
+
+
+Gate: b10
+Good Gate: 
+Inputs: 
+and_10 : 1
+Output: 
+and_10_0 : 1
+
+Bad Gates: 
+
+Fault: and_10_0 s@0
+Inputs: 
+and_10 : 1
+Output: 
+and_10_0 : 0
+
+Fault: b1_0 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_0 : 0
+
+Fault: a0 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_0 : 0
+
+Fault: a0_1 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_0 : 0
+
+Fault: and_10 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_0 : 0
+
+Fault: b1 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_0 : 0
+
+
+
+Gate: b11
+Good Gate: 
+Inputs: 
+and_10 : 1
+Output: 
+and_10_1 : 1
+
+Bad Gates: 
+
+Fault: b1_0 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_1 : 0
+
+Fault: a0 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_1 : 0
+
+Fault: a0_1 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_1 : 0
+
+Fault: and_10 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_1 : 0
+
+Fault: b1 s@0
+Inputs: 
+and_10 : 0
+Output: 
+and_10_1 : 0
+
+Fault: and_10_1 s@0
+Inputs: 
+and_10 : 1
+Output: 
+and_10_1 : 0
+
+
+
+Gate: b12
+Good Gate: 
+Inputs: 
+and_11 : 1
+Output: 
+and_11_0 : 1
+
+Bad Gates: 
+
+Fault: b1_1 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_0 : 0
+
+Fault: and_11_0 s@0
+Inputs: 
+and_11 : 1
+Output: 
+and_11_0 : 0
+
+Fault: and_11 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_0 : 0
+
+Fault: a1 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_0 : 0
+
+Fault: a1_1 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_0 : 0
+
+Fault: b1 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_0 : 0
+
+
+
+Gate: b13
+Good Gate: 
+Inputs: 
+and_11 : 1
+Output: 
+and_11_1 : 1
+
+Bad Gates: 
+
+Fault: b1_1 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_1 : 0
+
+Fault: and_11_1 s@0
+Inputs: 
+and_11 : 1
+Output: 
+and_11_1 : 0
+
+Fault: and_11 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_1 : 0
+
+Fault: a1 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_1 : 0
+
+Fault: a1_1 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_1 : 0
+
+Fault: b1 s@0
+Inputs: 
+and_11 : 0
+Output: 
+and_11_1 : 0
+
+
+
+Gate: fa1x1
+Good Gate: 
+Inputs: 
+and_01_1 : 1
+and_10_1 : 1
+Output: 
+c1 : 0
+
+Bad Gates: 
+
+Fault: c1 s@1
+Inputs: 
+and_01_1 : 1
+and_10_1 : 1
+Output: 
+c1 : 1
+
+Fault: a1_0 s@0
+Inputs: 
+and_01_1 : 0
+and_10_1 : 1
+Output: 
+c1 : 1
+
+Fault: b1_0 s@0
+Inputs: 
+and_01_1 : 1
+and_10_1 : 0
+Output: 
+c1 : 1
+
+Fault: a0 s@0
+Inputs: 
+and_01_1 : 1
+and_10_1 : 0
+Output: 
+c1 : 1
+
+Fault: b0 s@0
+Inputs: 
+and_01_1 : 0
+and_10_1 : 1
+Output: 
+c1 : 1
+
+Fault: a0_1 s@0
+Inputs: 
+and_01_1 : 1
+and_10_1 : 0
+Output: 
+c1 : 1
+
+Fault: a1 s@0
+Inputs: 
+and_01_1 : 0
+and_10_1 : 1
+Output: 
+c1 : 1
+
+Fault: and_01 s@0
+Inputs: 
+and_01_1 : 0
+and_10_1 : 1
+Output: 
+c1 : 1
+
+Fault: and_10 s@0
+Inputs: 
+and_01_1 : 1
+and_10_1 : 0
+Output: 
+c1 : 1
+
+Fault: and_01_1 s@0
+Inputs: 
+and_01_1 : 0
+and_10_1 : 1
+Output: 
+c1 : 1
+
+Fault: b1 s@0
+Inputs: 
+and_01_1 : 1
+and_10_1 : 0
+Output: 
+c1 : 1
+
+Fault: b0_1 s@0
+Inputs: 
+and_01_1 : 0
+and_10_1 : 1
+Output: 
+c1 : 1
+
+Fault: and_10_1 s@0
+Inputs: 
+and_01_1 : 1
+and_10_1 : 0
+Output: 
+c1 : 1
+
+
+
+Gate: fa1a1
+Good Gate: 
+Inputs: 
+and_01_0 : 1
+and_10_0 : 1
+Output: 
+cot1 : 1
+
+Bad Gates: 
+
+Fault: and_10_0 s@0
+Inputs: 
+and_01_0 : 1
+and_10_0 : 0
+Output: 
+cot1 : 0
+
+Fault: a1_0 s@0
+Inputs: 
+and_01_0 : 0
+and_10_0 : 1
+Output: 
+cot1 : 0
+
+Fault: b0 s@0
+Inputs: 
+and_01_0 : 0
+and_10_0 : 1
+Output: 
+cot1 : 0
+
+Fault: b1_0 s@0
+Inputs: 
+and_01_0 : 1
+and_10_0 : 0
+Output: 
+cot1 : 0
+
+Fault: a0_1 s@0
+Inputs: 
+and_01_0 : 1
+and_10_0 : 0
+Output: 
+cot1 : 0
+
+Fault: a0 s@0
+Inputs: 
+and_01_0 : 1
+and_10_0 : 0
+Output: 
+cot1 : 0
+
+Fault: a1 s@0
+Inputs: 
+and_01_0 : 0
+and_10_0 : 1
+Output: 
+cot1 : 0
+
+Fault: and_01 s@0
+Inputs: 
+and_01_0 : 0
+and_10_0 : 1
+Output: 
+cot1 : 0
+
+Fault: and_10 s@0
+Inputs: 
+and_01_0 : 1
+and_10_0 : 0
+Output: 
+cot1 : 0
+
+Fault: cot1 s@0
+Inputs: 
+and_01_0 : 1
+and_10_0 : 1
+Output: 
+cot1 : 0
+
+Fault: and_01_0 s@0
+Inputs: 
+and_01_0 : 0
+and_10_0 : 1
+Output: 
+cot1 : 0
+
+Fault: b1 s@0
+Inputs: 
+and_01_0 : 1
+and_10_0 : 0
+Output: 
+cot1 : 0
+
+Fault: b0_1 s@0
+Inputs: 
+and_01_0 : 0
+and_10_0 : 1
+Output: 
+cot1 : 0
+
+
+
+Gate: b14
+Good Gate: 
+Inputs: 
+cot1 : 1
+Output: 
+cot1_0 : 1
+
+Bad Gates: 
+
+Fault: and_10_0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: a1_0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: b0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: b1_0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: a0_1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: a0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: a1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: and_01 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: and_10 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: cot1_0 s@0
+Inputs: 
+cot1 : 1
+Output: 
+cot1_0 : 0
+
+Fault: cot1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: and_01_0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: b1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+Fault: b0_1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_0 : 0
+
+
+
+Gate: b15
+Good Gate: 
+Inputs: 
+cot1 : 1
+Output: 
+cot1_1 : 1
+
+Bad Gates: 
+
+Fault: and_10_0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: a1_0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: b0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: b1_0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: a0_1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: a0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: a1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: cot1_1 s@0
+Inputs: 
+cot1 : 1
+Output: 
+cot1_1 : 0
+
+Fault: and_01 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: and_10 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: cot1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: and_01_0 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: b1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+Fault: b0_1 s@0
+Inputs: 
+cot1 : 0
+Output: 
+cot1_1 : 0
+
+
+
+Gate: fa1x2
+Good Gate: 
+Inputs: 
+and_11_1 : 1
+cot1_1 : 1
+Output: 
+c2 : 0
+
+Bad Gates: 
+
+Fault: b1_1 s@0
+Inputs: 
+and_11_1 : 0
+cot1_1 : 1
+Output: 
+c2 : 1
+
+Fault: a1_0 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: and_11_1 s@0
+Inputs: 
+and_11_1 : 0
+cot1_1 : 1
+Output: 
+c2 : 1
+
+Fault: a0 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: a0_1 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: and_11 s@0
+Inputs: 
+and_11_1 : 0
+cot1_1 : 1
+Output: 
+c2 : 1
+
+Fault: c2 s@1
+Inputs: 
+and_11_1 : 1
+cot1_1 : 1
+Output: 
+c2 : 1
+
+Fault: and_10_0 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: b1_0 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: b0 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: cot1_1 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: a1_1 s@0
+Inputs: 
+and_11_1 : 0
+cot1_1 : 1
+Output: 
+c2 : 1
+
+Fault: and_01 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: and_10 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: cot1 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: and_01_0 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+Fault: b0_1 s@0
+Inputs: 
+and_11_1 : 1
+cot1_1 : 0
+Output: 
+c2 : 1
+
+
+
+Gate: fa1a2
+Good Gate: 
+Inputs: 
+and_11_0 : 1
+cot1_0 : 1
+Output: 
+c3 : 1
+
+Bad Gates: 
+
+Fault: b1_1 s@0
+Inputs: 
+and_11_0 : 0
+cot1_0 : 1
+Output: 
+c3 : 0
+
+Fault: a1_0 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: and_11_0 s@0
+Inputs: 
+and_11_0 : 0
+cot1_0 : 1
+Output: 
+c3 : 0
+
+Fault: a0_1 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: a0 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: and_11 s@0
+Inputs: 
+and_11_0 : 0
+cot1_0 : 1
+Output: 
+c3 : 0
+
+Fault: a1 s@0
+Inputs: 
+and_11_0 : 0
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: c3 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 1
+Output: 
+c3 : 0
+
+Fault: and_10_0 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: b1_0 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: b0 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: a1_1 s@0
+Inputs: 
+and_11_0 : 0
+cot1_0 : 1
+Output: 
+c3 : 0
+
+Fault: and_01 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: and_10 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: cot1_0 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: cot1 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: b1 s@0
+Inputs: 
+and_11_0 : 0
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: and_01_0 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+Fault: b0_1 s@0
+Inputs: 
+and_11_0 : 1
+cot1_0 : 0
+Output: 
+c3 : 0
+
+
+
